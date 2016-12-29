@@ -14,6 +14,7 @@
 		178D77201E1549B00033D11A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178D771E1E1549B00033D11A /* LaunchScreen.storyboard */; };
 		178D772B1E1549B00033D11A /* tooth_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178D772A1E1549B00033D11A /* tooth_testTests.swift */; };
 		178D77361E1549B00033D11A /* tooth_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178D77351E1549B00033D11A /* tooth_testUITests.swift */; };
+		178D77441E155B420033D11A /* BluetoothTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178D77431E155B420033D11A /* BluetoothTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		178D77311E1549B00033D11A /* tooth_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tooth_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		178D77351E1549B00033D11A /* tooth_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tooth_testUITests.swift; sourceTree = "<group>"; };
 		178D77371E1549B00033D11A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		178D77431E155B420033D11A /* BluetoothTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BluetoothTableViewCell.swift; path = TableViewCells/BluetoothTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				178D771C1E1549B00033D11A /* Assets.xcassets */,
 				178D771E1E1549B00033D11A /* LaunchScreen.storyboard */,
 				178D77211E1549B00033D11A /* Info.plist */,
+				178D77431E155B420033D11A /* BluetoothTableViewCell.swift */,
 			);
 			path = tooth_test;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178D77441E155B420033D11A /* BluetoothTableViewCell.swift in Sources */,
 				178D77181E1549B00033D11A /* ViewController.swift in Sources */,
 				178D77161E1549B00033D11A /* AppDelegate.swift in Sources */,
 			);
@@ -339,6 +343,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -389,6 +394,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -415,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3EHXGR24B7;
 				INFOPLIST_FILE = tooth_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -428,6 +435,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3EHXGR24B7;
 				INFOPLIST_FILE = tooth_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

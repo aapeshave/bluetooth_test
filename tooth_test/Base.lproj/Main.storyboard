@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +21,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W2N-6R-tAm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="73" id="SQp-gr-ncW" customClass="BluetoothTableViewCell" customModule="tooth_test" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="73"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SQp-gr-ncW" id="Lf9-mQ-7MW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onM-Q6-KBp">
+                                                    <rect key="frame" x="8" y="11" width="359" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nz-qk-wLw">
+                                                    <rect key="frame" x="8" y="39" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Nz-qk-wLw" firstAttribute="trailing" secondItem="Lf9-mQ-7MW" secondAttribute="trailingMargin" id="4NI-JC-esz"/>
+                                                <constraint firstItem="onM-Q6-KBp" firstAttribute="leading" secondItem="Lf9-mQ-7MW" secondAttribute="leading" constant="8" id="BUY-qO-5eM"/>
+                                                <constraint firstItem="5Nz-qk-wLw" firstAttribute="top" secondItem="onM-Q6-KBp" secondAttribute="bottom" constant="7.5" id="Rdy-Mg-EyV"/>
+                                                <constraint firstItem="5Nz-qk-wLw" firstAttribute="leading" secondItem="Lf9-mQ-7MW" secondAttribute="leadingMargin" id="Uru-06-tto"/>
+                                                <constraint firstItem="onM-Q6-KBp" firstAttribute="top" secondItem="Lf9-mQ-7MW" secondAttribute="top" constant="11" id="fmu-n3-7Di"/>
+                                                <constraint firstAttribute="trailing" secondItem="onM-Q6-KBp" secondAttribute="trailing" constant="8" id="nFn-1O-Uol"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbl_deviceInfo" destination="5Nz-qk-wLw" id="rfB-JS-NrU"/>
+                                            <outlet property="lbl_deviceName" destination="onM-Q6-KBp" id="nX2-bS-Fu7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yGO-gp-FKS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xlx-4N-dy6"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLV-CU-KxY">
+                                <rect key="frame" x="137" y="627" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DUC-V4-buf"/>
+                                    <constraint firstAttribute="width" constant="100" id="DUf-ka-CPT"/>
+                                </constraints>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickScan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dr2-iS-kXu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sLV-CU-KxY" firstAttribute="top" secondItem="W2N-6R-tAm" secondAttribute="bottom" constant="10" id="DD9-Xx-Rv8"/>
+                            <constraint firstAttribute="trailing" secondItem="W2N-6R-tAm" secondAttribute="trailing" id="MAS-Eg-N8t"/>
+                            <constraint firstItem="sLV-CU-KxY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dCo-Lb-Cdk"/>
+                            <constraint firstItem="W2N-6R-tAm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eBe-bj-1xW"/>
+                            <constraint firstItem="W2N-6R-tAm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="i9H-2n-tlk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sLV-CU-KxY" secondAttribute="bottom" constant="10" id="tzY-gd-eze"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="W2N-6R-tAm" id="d1D-Yu-IbW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
 </document>
